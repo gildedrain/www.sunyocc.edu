@@ -1,0 +1,284 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]> <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <title id="pageTitle" runat="server"></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <!-- GUI framework -->
+  <link type="text/css" rel="stylesheet" href="../gui/css/gui.css" media="all" />
+  <script type="text/javascript" src="../gui/js/jquery.js"></script>
+  <script type="text/javascript" src="../gui/js/jqueryui.js"></script>
+  <script type="text/javascript" src="../gui/js/tools.js"></script>
+  <!-- OCC-specific code -->
+  <script type="text/javascript" src="../occ_global/js/occ_tools.js"></script>
+  <script type="text/javascript" src="http://galleries.sunyocc.edu/m/embed.js"></script>
+  <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
+  <script type="text/javascript">
+  $(window).load(function() {
+      $('#slider').nivoSlider();
+  });
+  </script>
+
+<script type="text/javascript">
+
+  $(document).ready(function () {
+
+    // Open/Close Animation for Site Header Navigation "Drawer"
+
+      // disable basic functionality
+      $('#siteheader, .headernav').removeClass('basic');
+
+      // trackers & units
+      var $showHeader = false; // Initially, it SHOULD NOT be shown
+      var $visible = false; // Initially, it IS NOT shown
+      var $hideDelay = 750;
+      var $hideDelayTimer = null;
+      var $openHeight = 275;
+      var $closedHeight = 48;
+
+      // mouseenter event opens drawer
+      $('#home_top').mouseenter(function() {
+        if ($hideDelayTimer) clearTimeout($hideDelayTimer);
+        if ($visible == true) { // don't do anything if it's already visible
+          return;
+        }
+        else {
+          $showHeader = true;
+          if ($showHeader == true && $visible == false) {
+            headerOpen();
+          }
+        }
+      });
+
+      // mouseleave event closes drawer after a delay
+      $('#home_top').mouseleave(function() {
+        // reset the timer if we get fired again - avoids double animations
+        if ($hideDelayTimer) clearTimeout($hideDelayTimer);
+        // store the timer so that it can be cleared in the mouseover if required
+        $hideDelayTimer = setTimeout(function () {
+          $hideDelayTimer = null;
+          $showHeader = false;
+          if ($showHeader == false && $visible == true) {
+            headerClose();
+          }
+        }, $hideDelay);
+      });
+
+      function headerOpen () {
+        $('#siteheader, .headernav').animate({height: $openHeight + 'px'}, 150);
+        $visible = true;
+      }
+      function headerClose () {
+        $('#siteheader, .headernav').animate({height: $closedHeight + 'px',}, 150);
+        $visible = false;
+      }
+  });
+
+</script>
+
+  <link type="text/css" rel="stylesheet" href="css/nivo-slider.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="css/default.css" media="all" />
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <!-- END head INCLUDE FILE -->
+
+  <link type="text/css" rel="stylesheet" href="css/homepage.css" media="screen" />
+
+
+
+
+ </head>
+<body>
+    <div id="home_top">
+      <div class="emergency"></div>
+      <div class="announcement"></div>
+
+      <div class="container"><h1><a href="http://www.sunyocc.edu">Onondaga Community College</a></h1></div>
+
+      <div id="siteheader" class="basic"></div>
+      <div class="container">
+        <div class="headernav basic">
+
+          <div class="stuff">
+            <h3>Information For</h3>
+            <ul>
+              <li><a href="#" class="light-grey">Future Students</a></li>
+              <li><a href="#" class="light-grey">Parents &amp; Families</a></li>
+              <li><a href="#" class="light-grey">Community Members</a></li>
+              <li><a href="#" class="light-grey">Adult Learners</a></li>
+              <li><a href="#" class="light-grey">Businesses</a></li>
+              <li><a href="#" class="light-grey">Alumni</a></li>
+              <li><a href="#" class="light-blue">Current Students</a></li>
+              <li><a href="#" class="light-blue secure">Employees</a></li>
+            </ul>
+          </div>
+          <div class="stuff">
+            <h3>Admission &amp; Aid</h3>
+            <ul class="light-grey">
+              <li><a href="#" class="white">Apply</a></li>
+              <li><a href="#" class="white">Application Status</a></li>
+              <li><a href="#" class="light-grey">Office of Admission</a></li>
+              <li><a href="#" class="light-grey">Placement Testing</a></li>
+              <li><a href="#" class="light-grey">Tuition &amp; Fees</a></li>
+              <li><a href="#" class="light-grey">Financial Aid</a></li>
+              <li><a href="#" class="light-grey">Residence Halls</a></li>
+            </ul>
+          </div>
+          <div class="stuff">
+            <h3>Academics</h3>
+            <ul class="light-grey">
+              <li><a href="#" class="white">Register for Classes</a></li>
+              <li><a href="#" class="white">Schedule of Classes</a></li>
+              <li><a href="#" class="white">College Catalog</a></li>
+              <li><a href="#" class="light-grey">Programs of Study</a></li>
+              <li><a href="#" class="light-grey">Course Descriptions</a></li>
+              <li><a href="#" class="light-grey">Community Education</a></li>
+            </ul>
+          </div>
+          <div class="stuff formbox">
+            <form class="labels-inside"><label for="text">I'm looking for...</label><input id="text" name="searchbox" class="searchbox" type="text" value="" /><input class="submitbutton" type="submit" value="go" /></form>
+            <p class="white">Top Searches</p>
+            <ul>
+              <li><a href="#" class="light-blue">Make a Payment</a></li>
+              <li><a href="#" class="light-blue">Financial Aid</a></li>
+              <li><a href="#" class="light-blue">Campus Map</a></li>
+              <li><a href="#" class="light-blue">Bursar</a></li>
+              <li><a href="#" class="light-blue">Study Abroad</a></li>
+              <li><a href="#" class="light-blue">Academic Calendar</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- NIVO SLIDER -->
+            <div class="slider-wrapper theme-default">
+                <div id="slider" class="nivoSlider">
+                    <img src="images/winter.jpg" alt="" data-transition="boxRandom" title="#wintercaption"  />
+                    <!-- <img src="images/up1024.jpg"  data-thumb="images/up.jpg" data-transition="boxRandom" alt="" title="#upcaption" />
+                              <img src="images/walle1024.jpg"  alt="" data-transition="boxRandom"  title="#wallecaption"  />
+                              <img src="images/nemo1024.jpg" alt="" data-transition="boxRandom" title="#nemocaption" />
+                    -->       </div>
+                <!-- CAPTIONS -->
+                <div id="wintercaption" class="nivo-html-caption">
+                  <div class="captioncenter">
+                    <p><strong>Winter Session</strong></p>
+                    <p class="dark-blue">Begins December 31st</p>
+                  </div>
+                </div>
+
+                <div id="upcaption" class="nivo-html-caption">
+                  <div class="captioncenter">
+                    <p><strong>This</strong> is Pixar's Up!.</p>
+                    <p>A story about an old man, his dead wife, and some balloons.</p>
+                  </div>
+                </div>
+
+                <div id="wallecaption" class="nivo-html-caption">
+                  <div class="captionright bg-black">
+                    <p><strong>This</strong> is the story of Wall-e</p>
+                    <p>The best pixar movie ever!</p>
+                  </div>
+                </div>
+
+                <div id="nemocaption" class="nivo-html-caption">
+                  <div class="captionleft bg-black">
+                    <p><strong>This</strong> is Finding Nemo.</p>
+                    <p>A story about some fish.</p>
+                  </div>
+                </div>
+                <!-- // END CAPTIONS -->
+            </div>
+    <!--  // END NIVO SLIDER -->
+
+    <div id="main" role="main">
+      <div class="container">
+        <div class="banners">
+          <p><img src="images/lazers.jpg" height="272" width="182" /><a class="white play" href="#"><span>NJCAA<br/>Champions</span></a></p>
+          <p><img src="images/tao.jpg" height="272" width="182" /><a class="white" href="#"><span>TAO</span></a></p>
+          <p><a class="bg-medium-blue white" href="#"><span>Fall<br/>2012<br/>Registration</span></a></p>
+          <p><img src="images/infosession.jpg" height="272" width="182" /><a class="white" href="#"><span>Adult<br/>Learner<br/>Info<br/>Session</span></a></p>
+          <p><a class="bg-dark-blue white" href="#"><span>Open<br/>House</span></a></p>
+        </div>
+        <div class="brands col6">
+          <ul>
+            <li><a id="lazers" href="#">Lazers Athletics</a></li>
+            <li><a id="src" href="#">SRC Arena &amp; Events Center</a></li>
+            <li><a id="ymca" href="#">Southwest YMCA</a></li>
+            <li><a id="aac" href="#">Arts Across Campus</a></li>
+            <li><a id="support" href="#">Support Onondaga</a></li>
+          </ul>
+        </div>
+        <div class="news col2 first">
+          <h2>News</h2>
+          <h3>Sports</h3>
+          <p><a href="#">Women's Basketball Clinches Regional Championship</a></p>
+          <p><a href="#">Southwest YMCA Introduces Family Time Schedule</a></p>
+          <h3>Sustainability</h3>
+          <p><a href="#">Onondaga Receives STARS Silver Rating for Sustainability</a><p>
+          <h3>The Arts</h3>
+          <p><a href="#">Music Chair Among 50 Most Influential Music Professors on Twitter</a></p>
+          <p><a href="#">2012 John F.X. Mannion Lecture Series comes to a close</a></p>
+        </div>
+        <div class="events col2 precoldot5">
+          <h2>Events</h2>
+          <table class="bg-pale-blue nogrid zebrarows">
+            <tr><td>5/8</td><td><a href="#">Spring Concert II</a></td></tr>
+            <tr><td>5/9</td><td><a href="#">John F.X. Mannion Lecture Series Closing Ceremony</a></td></tr>
+            <tr><td>5/11</td><td><a href="#">OCC Guitar Ensemble</a></td></tr>
+            <tr><td>5/15</td><td><a href="#">Onondaga CC &amp; Broome CC Partnership Info Session</a></td></tr>
+            <tr><td>5/19</td><td><a href="#">49th Commencement</a></td></tr>
+          </table>
+          <ul class="style_none">
+            <li><a class="handwriting medium-red" href="#">&#187; View All Events</a></li>
+            <li><a class="handwriting medium-red" href="#">&#187; View All News</a></li>
+          </ul>
+        </div>
+        <div class="social col1 precoldot5">
+          <h2>Follow Us</h2>
+          <ul>
+            <li><a href="#" id="facebook">Facebook</a></li>
+            <li><a href="#" id="twitter">Twitter</a></li>
+            <li><a href="#" id="flickr">Flickr</a></li>
+            <li><a href="#" id="youtube">YouTube</a></li>
+            <li><a href="#" id="linkedin">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+<p class="dots">&nbsp;</p>
+
+
+    <div id="footer">
+      <div class="container">
+        <h2 class="col3 logotext">Onondaga Community College</h2>
+        <h2 class="col3 textright tagline">Explore. Discover. <em>Transform</em>.</h2>
+        <div class="col1dot5">
+          <p>4585 West Seneca Turnpike</br>Syracuse, NY 13219<br />315.498.2622<br /><a mailto:"occinfo@sunyocc.edu">occinfo@sunyocc.edu</a></p>
+        </div>
+        <a class="question" href="#">Have a Question?</a>
+        <div class="footerlinks">
+          <ul>
+            <li><a href="#">About the College</a></li>
+            <li><a href="#">Visit the Campus</a></li>
+            <li><a href="#">Maps &amp; Directions</a></li>
+            <li><a href="#">Extension Sites</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Employment Opportunities</a></li>
+            <li><a href="#">For the Media</a></li>
+            <li><a href="#">Event Space Available</a></li>
+          </ul>
+          <ul>
+            <li><a href="#">Hours of Operation</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <p class="dots">&nbsp;</p>
+      </div> <!-- end container -->
+    </div> <!-- end footer -->
+  </div>
+</body>
+</html>
