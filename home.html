@@ -8,96 +8,28 @@
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <!-- GUI framework -->
   <link type="text/css" rel="stylesheet" href="../gui/css/gui.css" media="all" />
+  <link type="text/css" rel="stylesheet" href="../occ_global/css/occ_global.css" media="all" />
+
   <script type="text/javascript" src="../gui/js/jquery.js"></script>
   <script type="text/javascript" src="../gui/js/jqueryui.js"></script>
   <script type="text/javascript" src="../gui/js/tools.js"></script>
   <!-- OCC-specific code -->
   <script type="text/javascript" src="../occ_global/js/occ_tools.js"></script>
   <script type="text/javascript" src="http://galleries.sunyocc.edu/m/embed.js"></script>
-  <script type="text/javascript" src="js/jquery.nivo.slider.js"></script>
-  <script type="text/javascript">
-  $(window).load(function() {
-      $('#slider').nivoSlider();
-  });
-  </script>
-
-<script type="text/javascript">
-
-  $(document).ready(function () {
-
-    // Open/Close Animation for Site Header Navigation "Drawer"
-
-      // disable basic functionality
-      $('#siteheader, .headernav').removeClass('basic');
-
-      // trackers & units
-      var $showHeader = false; // Initially, it SHOULD NOT be shown
-      var $visible = false; // Initially, it IS NOT shown
-      var $hideDelay = 750;
-      var $hideDelayTimer = null;
-      var $openHeight = 275;
-      var $closedHeight = 48;
-
-      // mouseenter event opens drawer
-      $('#home_top').mouseenter(function() {
-        if ($hideDelayTimer) clearTimeout($hideDelayTimer);
-        if ($visible == true) { // don't do anything if it's already visible
-          return;
-        }
-        else {
-          $showHeader = true;
-          if ($showHeader == true && $visible == false) {
-            headerOpen();
-          }
-        }
-      });
-
-      // mouseleave event closes drawer after a delay
-      $('#home_top').mouseleave(function() {
-        // reset the timer if we get fired again - avoids double animations
-        if ($hideDelayTimer) clearTimeout($hideDelayTimer);
-        // store the timer so that it can be cleared in the mouseover if required
-        $hideDelayTimer = setTimeout(function () {
-          $hideDelayTimer = null;
-          $showHeader = false;
-          if ($showHeader == false && $visible == true) {
-            headerClose();
-          }
-        }, $hideDelay);
-      });
-
-      function headerOpen () {
-        $('#siteheader, .headernav').animate({height: $openHeight + 'px'}, 150);
-        $visible = true;
-      }
-      function headerClose () {
-        $('#siteheader, .headernav').animate({height: $closedHeight + 'px',}, 150);
-        $visible = false;
-      }
-  });
-
-</script>
-
-  <link type="text/css" rel="stylesheet" href="css/nivo-slider.css" media="all" />
-  <link type="text/css" rel="stylesheet" href="css/default.css" media="all" />
-
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css' />
   <!-- END head INCLUDE FILE -->
 
   <link type="text/css" rel="stylesheet" href="css/homepage.css" media="screen" />
-
-
-
-
- </head>
+</head>
 <body>
+
     <div id="home_top">
-      <div class="emergency"></div>
-      <div class="announcement"></div>
+      <div id="emergency"><p>Something happened on the way to the forum when this guy said something to this lady and she stood up and left. and then my mom said she's a pickle.</p></div>
+            <div id="announcement"><p>Something happened on the way to the forum when this guy said something to this lady and she stood up and left. and then my mom said she's a pickle.</p></div>
 
-      <div class="container"><h1><a href="http://www.sunyocc.edu">Onondaga Community College</a></h1></div>
+      <div class="container"><h1 id="occlogo"><a href="http://www.sunyocc.edu">Onondaga Community College</a></h1></div>
 
-      <div id="siteheader" class="basic"></div>
+      <div id="occheader" class="basic"></div>
       <div class="container">
         <div class="headernav basic">
 
@@ -153,46 +85,19 @@
       </div>
     </div>
 
-    <!-- NIVO SLIDER -->
-            <div class="slider-wrapper theme-default">
-                <div id="slider" class="nivoSlider">
-                    <img src="images/winter.jpg" alt="" data-transition="boxRandom" title="#wintercaption"  />
-                    <!-- <img src="images/up1024.jpg"  data-thumb="images/up.jpg" data-transition="boxRandom" alt="" title="#upcaption" />
-                              <img src="images/walle1024.jpg"  alt="" data-transition="boxRandom"  title="#wallecaption"  />
-                              <img src="images/nemo1024.jpg" alt="" data-transition="boxRandom" title="#nemocaption" />
-                    -->       </div>
-                <!-- CAPTIONS -->
-                <div id="wintercaption" class="nivo-html-caption">
-                  <div class="captioncenter">
-                    <p><strong>Winter Session</strong></p>
-                    <p class="dark-blue">Begins December 31st</p>
-                  </div>
-                </div>
-
-                <div id="upcaption" class="nivo-html-caption">
-                  <div class="captioncenter">
-                    <p><strong>This</strong> is Pixar's Up!.</p>
-                    <p>A story about an old man, his dead wife, and some balloons.</p>
-                  </div>
-                </div>
-
-                <div id="wallecaption" class="nivo-html-caption">
-                  <div class="captionright bg-black">
-                    <p><strong>This</strong> is the story of Wall-e</p>
-                    <p>The best pixar movie ever!</p>
-                  </div>
-                </div>
-
-                <div id="nemocaption" class="nivo-html-caption">
-                  <div class="captionleft bg-black">
-                    <p><strong>This</strong> is Finding Nemo.</p>
-                    <p>A story about some fish.</p>
-                  </div>
-                </div>
-                <!-- // END CAPTIONS -->
-            </div>
-    <!--  // END NIVO SLIDER -->
-
+<!-- BG-IMAGE SLIDESHOW -->
+    <ul class="bg_slideshow">
+      <li class="bg-dark-red"><img src="http://placekitten.com/1380/500" alt="alt_text" height="500" width="1400" /><a class="topleft bg-black white" href="#"><strong class="light-blue">Lego Robotics</strong><br />@ Summer STEM Camp</a></li>
+      <li class="bg-dark-grey"><img src="http://placekitten.com/1390/600" alt="alt_text" height="600" width="1400" /><a class="bg-dark-grey white topcenter" href="#">Now Offering:<br /><strong>Pharmacy Tech</strong></a></li>
+      <li class="bg-dark-yellow"><img src="http://placekitten.com/1430/700" alt="alt_text" height="700" width="1400" /><a class="bg-dark-green white topright" href="#">Enroll in a <strong>CBIT computer certification course</strong></a></li>
+      <li class="bg-dark-orange"><img src="http://placekitten.com/1480/600" alt="alt_text" height="600" width="1400" /><a class="bg-dark-yellow white middleleft" href="#">Check out <strong>College for Kids</strong><br />and other Summer Programs</a></li>
+      <li class="bg-dark-purple"><img src="http://placekitten.com/1500/500" alt="alt_text" height="500" width="1400" /><a class="bg-dark-orange white middlecenter" href="#"><strong>Start here, finish there!</strong><br />Get your Bachelor's or Master's at Onondaga</a></li>
+      <li class="bg-dark-purple"><img src="http://placekitten.com/1500/500" alt="alt_text" height="500" width="1400" /><a class="bg-dark-orange white middleright" href="#"><strong>Start here, finish there!</strong><br />Get your Bachelor's or Master's at Onondaga</a></li>
+      <li class="bg-dark-purple"><img src="http://placekitten.com/1500/500" alt="alt_text" height="500" width="1400" /><a class="bg-dark-orange white bottomleft" href="#"><strong>Start here, finish there!</strong><br />Get your Bachelor's or Master's at Onondaga</a></li>
+      <li class="bg-dark-purple"><img src="http://placekitten.com/1500/500" alt="alt_text" height="500" width="1400" /><a class="bg-dark-orange white bottomcenter" href="#"><strong>Start here, finish there!</strong><br />Get your Bachelor's or Master's at Onondaga</a></li>
+      <li class="bg-dark-purple"><img src="http://placekitten.com/1500/500" alt="alt_text" height="500" width="1400" /><a class="bg-dark-orange white bottomright" href="#"><strong>Start here, finish there!</strong><br />Get your Bachelor's or Master's at Onondaga</a></li>
+    </ul>
+<!-- // END BG-IMAGE SLIDESHOW -->
     <div id="main" role="main">
       <div class="container">
         <div class="banners">
@@ -251,7 +156,7 @@
 <p class="dots">&nbsp;</p>
 
 
-    <div id="footer">
+    <div id="occfooter">
       <div class="container">
         <h2 class="col3 logotext">Onondaga Community College</h2>
         <h2 class="col3 textright tagline">Explore. Discover. <em>Transform</em>.</h2>
@@ -280,5 +185,7 @@
       </div> <!-- end container -->
     </div> <!-- end footer -->
   </div>
+  <script type="text/javascript" src="../gui/js/modernizr.js"></script>
+
 </body>
 </html>
