@@ -1,6 +1,7 @@
 /* BANNERS */
 .banners {position:relative; display:block; margin:-150px 5px 0 5px; z-index:1000;}
 .banners p {position:relative; float:left; margin-right:10px; width:182px; height:272px;}
+.ie8 .banners p {width:180px;}
 .banners p:last-of-type {margin-right:0;}
   .banners img {position:absolute; z-index:0;}
   .banners a {position:absolute; z-index:1; height:272px; width:182px; outline:1px solid #fff;}
@@ -14,24 +15,30 @@
       background: linear-gradient(to top,  rgba(0,0,0,1) 0%,rgba(0,0,0,0) 100%);
       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00000000',GradientType=0 );
     }
+    .ie .banners span {background:#000; padding-top:5px;}
   .play {background:transparent url(../images/play.png) no-repeat center center;}
 /* BRANDS */
-.brands ul {list-style:none; padding:0;}
-  .brands li {display:inline-block;}
-    .brands a {text-indent: 100%; white-space: nowrap; overflow: hidden; background-image:url(../images/sprites.png); background-repeat:no-repeat; background-position:0 0; display:block; height:79px;}
-    #lazers {background-position:0 0; width:142px; margin-right:58px;}
-    #src {background-position:-194px 0; width:175px; margin-right:58px;}
-    #ymca {background-position:-421px 0; width:90px; margin-right:58px;}
-    #aac {background-position:-569px 0; width:90px; margin-right:58px;}
-    #support {background-position:-710px 0; width:172px;}
-    #lazers:hover {background-position:0 -83px;}
-    #src:hover {background-position:-194px -83px;}
-    #ymca:hover {background-position:-421px -83px;}
-    #aac:hover {background-position:-569px -81px;}
-    #support:hover {background-position:-710px -83px;}
+.brands {position:relative; height:100px;} /* needed this to set z-index to keep bg_slideshow from overlapping .brands */
+.ie7 .brands {margin-bottom:30px; margin-top:150px;}
+  .brands ul {position:absolute; list-style:none; padding:0; z-index:2;}
+    .brands li {display:inline-block;}
+    .ie7 .brands li {display:block; float:left;}
+      .brands a {text-indent: 100%; white-space: nowrap; overflow: hidden;background-image:url("../images/sprites.png"); background-repeat:no-repeat; background-position:0 0; display:block; height:79px; }
+      #lazers {background-position:0 0; width:180px; margin-right:45px;}
+      #src {background-position:-225px 0; width:175px; margin-right:45px;}
+      #ymca {background-position:-450px 0; width:90px; margin-right:45px;}
+      #aac {background-position:-595px 0; width:90px; margin-right:45px;}
+      #support {background-position:-730px 0; width:172px;}
+      #lazers:hover {background-position:0 -83px;}
+      #src:hover {background-position:-225px -83px;}
+      #ymca:hover {background-position:-450px -83px;}
+      #aac:hover {background-position:-595px -81px;}
+      #support:hover {background-position:-730px -83px;}
+
 /* NEWS, EVENTS, SOCIAL */
 a {color:#222; font-weight:200;}
 .news h2, .events h2, .social h2 {display:inline-block; text-transform:uppercase; font-weight:200; background:#dd0000; padding:5px; font-size:1em; color:#fff;}
+.ie7 .news h2, .ie7 .events h2, .ie7 .social h2 {display:block;}
 .news h3 {font-size:.8em; text-transform:uppercase; color:#dd0000; margin:.75em 0 .25em 0;}
 .news p {margin-bottom:.75em;}
 .events td {line-height:1.5;}
