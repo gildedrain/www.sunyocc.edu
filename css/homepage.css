@@ -16,12 +16,12 @@
 .headernav ul{padding:0 0 1em 0;height:230px;}
 .headernav li{list-style:none;line-height:1.2;font-size:.9em;margin-bottom:.8em;}
   .ie7 .headernav li, .ie8 .headernav li {font-size:.8em;}
-.headernav form {margin-top:-5px;}
+.headernav form {margin-top:-7px;}
 .headernav label{display:none;}
-.headernav .searchbox{height:19px;padding:5px;background:#062640;border:1px solid #555;color:#fff;position:relative;top:-5px;width:130px;}
-.headernav .submitbutton{text-indent:1000%;white-space:nowrap;overflow:hidden;width:30px;height:40px;background:url(../images/siteheader_sprites.png) no-repeat 0px -1px;border:0;position:relative; padding:0; margin:0;}
-  .ie7 .headernav .submitbutton {top:-13px; background:#1799fe; color:#fff; height:31px;}
-  .ie8 .headernav .submitbutton {top:-2px; background:#1799fe; color:#fff; height:31px; text-indent:0; overflow:visible; white-space:normal;}
+.headernav .searchbox{height:19px;padding:5px;background:#333;border:1px solid #444; border-right-width:0; color:#fff;position:relative;width:130px;font-style:normal;border-radius:3px 0 0 3px;}
+.headernav .submitbutton{text-indent:1000%;white-space:nowrap;overflow:hidden;width:30px;height:31px;background:url(../images/siteheader_sprites.png) no-repeat 0 0;border:1px solid #444;border-width:1px 0 1px 0; position:relative; padding:0; margin:0;}
+  .ie7 .headernav .submitbutton {top:-7px; background:#1799fe; color:#fff; height:31px;}
+  .ie8 .headernav .submitbutton {top:2px; background:#1799fe; color:#fff; height:31px; text-indent:0; overflow:visible; white-space:normal;}
 .headernav p{font-size:13px;margin:5px 0 .8em 0;}
 #occheader.basic{height:300px;}
 .headernav.basic{position:relative;height:auto;}
@@ -56,7 +56,7 @@ a {color:#222; font-weight:200;}
 .news h3 {font-size:.8em; text-transform:uppercase; color:#dd0000; margin:.75em 0 .25em 0;}
 .news p {margin-bottom:.75em;}
 .events td {line-height:1.5;}
-.events li {font-size:1.25em; line-height:2;}
+.events li {font-size:1.25em; line-height:1em; margin-bottom:.75em;}
 .social {margin-right:5px;}
 .social ul {list-style:none; padding:0;}
 .social a {line-height:1.75; padding-left:36px; color:#003151;font-family:'nothing you could do', 'open sans', verdana, sans-serif; font-size:1.25em; background:url(../images/sprites.png) no-repeat 0 0;}
@@ -66,20 +66,20 @@ a {color:#222; font-weight:200;}
 #youtube {background-position:0 -283px;}
 #linkedin {background-position:0 -322px;}
 
-@media all and (max-width:970px),(max-width:482){
+@media all and (max-width:970px),(max-width:550px){
   .container{width:100%;margin:0;padding:0;}
   #section,#section.hasmenu{float:none;margin:0;width:100%;padding:0;}
   #aside{position:absolute;top:-300px;left:0;}
   #aside:hover{top:0;}
 }
 @media all and (max-width:970px){
-  .precoldot5, .precol1, .precol2, .precol3, .precol4, .precol5, .precol6 {margin-left:0 !important;}
-  .col1{width:20%;}
-  .col1dot5{width:32%;}
-  .col2{width:45%;}
-  .col3{width:74%;}
-  .col4{width:95%;}
-  .col5{width:95%;}
+  .precoldot5, .precol1, .precol2, .precol3, .precol4, .precol5, .precol6 {margin-left:5px !important;}
+  .col1{width:15%;}
+  .col1dot5{width:25%;}
+  .col2{width:31.3%;}
+  .col3{width:48%;}
+  .col4{width:66%;}
+  .col5{width:82%;}
   .col6{width:95%;}
 
   #occlogo {background-image:url(../images/occlogo_variant1.jpg); width:100%; background-color:#000;left:0;}
@@ -90,21 +90,14 @@ a {color:#222; font-weight:200;}
   .headernav h3 {margin:.25em 0 1em 0;}
   #occheaderbg.closed, .headernav.closed {height:48px;}
   #occheaderbg.opened, .headernav.opened {height:350px;}
-  .banners p {width:18%; background:#000; font-size:70%; overflow:hidden;}
-  .social.col1 {width:100%;}
-    .social h2 {margin-right:20px; margin-left:5px;}
-    .social ul {display:inline;}
-    .social li {display:inline; margin-right:20px;}
   #occfooter .tagline, #occfooter .logotext {width:48%; }
   #occfooter .tagline {margin-bottom:2em;}
-  #occfooter .footerlinks {float:left;}
-  #occfooter .footerlinks.col4 {width:auto;}
-  /* homepage specific styles */
+  #occfooter .footerlinks {float:left; clear:both; width:auto;}
+/* homepage specific styles */
   .brands {text-align:center;}
 }
-@media all and (max-width:482px){
-  .precoldot5, .precol1, .precol2, .precol3, .precol4, .precol5, .precol6 {margin-left:0 !important;}
-  .col1,.col1dot5,.col2,.col3,.col4,.col5,.col6{width:100%;float:none;clear:both;margin:0;padding:0;}
+@media all and (max-width:550px){
+  .col1,.col1dot5,.col2,.col3,.col4,.col5,.col6{width:97%;float:none;clear:both;margin:0 0 0 5px;padding:0;}
   .left,.right{float:none;}
   .polaroid{display:none;}
 
@@ -122,20 +115,15 @@ a {color:#222; font-weight:200;}
   #occheaderbg.opened, .headernav.opened {height:auto;}
   .bg_slideshow {margin-top:0px;}
   .bg_slideshow_controls{position:relative;float:right;z-index:6;top:10px;margin:0;width:135px;list-style:none;padding:0;}
-  .banners {margin:0; padding:0;}
-  .banners p {float:none; width:auto; display:block; margin:0 0 5px 0; height:auto; width:100%; background:#1179fe; font-size:100%;}
-  .banners img {display:none;}
-  .banners a {position:relative; float:none; display:block; height:auto; font-size:1em; padding:0; background:#1179fe; color:#fff; line-height:2em; outline:0px solid white; margin-left:5px;}
-  .banners span {position:relative; float:none; display:block; height:auto; font-size:1em; width:100%;  padding:0; background:#1179fe;line-height:2em;}
+  #occfooter {margin-top:0; padding:1em 5px 1em 5px;}
   #occfooter .tagline, #occfooter .logotext {width:100%; }
-  #occfooter {margin-top:0;}
-  #occfooter .footerlinks ul {float:none;}
-  #occfooter .footerlinks.col4 {width:auto;}
   #occfooter .textright {text-align:left;}
+  #occfooter .footerlinks {width:97%; padding:0;}
+  #occfooter .footerlinks ul {float:none; padding:0; margin:0;}
+  #occfooter .footerlinks a {display:block; font-size:1em; line-height:2em; padding:.5em; border-bottom:1px solid #333; }
   /* homepage specific styles */
-  .brands ul {margin:0; padding:0;}
-   .brands li {display:block; padding:0; background:#003151}
-   .brands a {text-indent:0; white-space:wrap; overflow:visible; background:none; line-height:2em; height:auto; color:#fff; padding:0; margin:0 0 5px 5px; width:auto;}
-   #lazers, #src, #aac, #ymca, #support {width:auto;}
-   .social h2 {margin-left:0;}
+  .brands ul {margin:0 0 5px 0; padding:0;}
+   .brands li {display:block; padding:0; background:#003151; margin:0;}
+   .brands a {text-indent:0; white-space:normal; overflow:visible; background:none; height:auto; color:#fff; width:auto;display:block; font-size:1em; line-height:2em; padding:.5em; border-bottom:1px solid #fff; }
+   #lazers, #src, #aac, #ymca, #support {width:auto;margin:0;}
 }
