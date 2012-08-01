@@ -28,6 +28,7 @@
 .accent1{color:#FFF;}
 .accent2{color:#70B1E4;}
 .secure{padding-left:15px;background:url(../images/siteheader_sprites.png) no-repeat -4px -47px;}
+.headernav .tap {color:#1799fe; display:none; text-transform:uppercase; font-size:1.1em; margin:.75em 0 .5em .5em;}
 
 /* homepage specific styles */
 /* BRANDS */
@@ -74,8 +75,8 @@ a {color:#222; font-weight:200;}
 }
 @media all and (max-width:970px){
   .precoldot5, .precol1, .precol2, .precol3, .precol4, .precol5, .precol6 {margin-left:5px !important;}
-  .col1{width:15%;}
-  .col1dot5{width:25%;}
+  .col1{width:14.75%;}
+  .col1dot5{width:23%;}
   .col2{width:31.3%;}
   .col3{width:48%;}
   .col4{width:66%;}
@@ -92,7 +93,6 @@ a {color:#222; font-weight:200;}
   #occheaderbg.opened, .headernav.opened {height:350px;}
   #occfooter .tagline, #occfooter .logotext {width:48%; }
   #occfooter .tagline {margin-bottom:2em;}
-  #occfooter .footerlinks {float:left; clear:both; width:auto;}
 /* homepage specific styles */
   .brands {text-align:center;}
 }
@@ -118,12 +118,11 @@ a {color:#222; font-weight:200;}
   #occfooter {margin-top:0; padding:1em 5px 1em 5px;}
   #occfooter .tagline, #occfooter .logotext {width:100%; }
   #occfooter .textright {text-align:left;}
-  #occfooter .footerlinks {width:97%; padding:0;}
-  #occfooter .footerlinks ul {float:none; padding:0; margin:0;}
-  #occfooter .footerlinks a {display:block; font-size:1em; line-height:2em; padding:.5em; border-bottom:1px solid #333; }
   /* homepage specific styles */
   .brands ul {margin:0 0 5px 0; padding:0;}
    .brands li {display:block; padding:0; background:#003151; margin:0;}
    .brands a {text-indent:0; white-space:normal; overflow:visible; background:none; height:auto; color:#fff; width:auto;display:block; font-size:1em; line-height:2em; padding:.5em; border-bottom:1px solid #fff; }
    #lazers, #src, #aac, #ymca, #support {width:auto;margin:0;}
+
+   .headernav .tap {display:block;}
 }
