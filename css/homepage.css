@@ -57,7 +57,7 @@ a {color:#222; font-weight:200;}
 .news h3 {font-size:.8em; text-transform:uppercase; color:#dd0000; margin:.75em 0 .25em 0;}
 .news p {margin-bottom:.75em;}
 .events td {line-height:1.5;}
-.events li {font-size:1.25em; line-height:1em; margin-bottom:.75em;}
+.news li, .events li {font-size:1.25em; line-height:1em; margin-bottom:.75em;}
 .social {margin-right:5px;}
 .social ul {list-style:none; padding:0;}
 .social a {line-height:1.75; padding-left:36px; color:#003151;font-family:'nothing you could do', 'open sans', verdana, sans-serif; font-size:1.25em; background:url(../images/sprites.png) no-repeat 0 0;}
@@ -101,7 +101,7 @@ a {color:#222; font-weight:200;}
   .left,.right{float:none;}
   .polaroid{display:none;}
 
-  #occlogo{display:block;position:relative;margin:0;height:50px;}
+  #occlogo {display:block;position:relative;margin:0;height:50px; background-image:url(../images/occlogo_variant2.gif); width:100%; background-color:#000;left:0;}
   #occlogo a {color:#fff;}
   #occheaderbg{display:none;}
   .headernav{position:relative;overflow:hidden;z-index:1004;padding-left:0;background:#000;width:100%;margin:0;}
