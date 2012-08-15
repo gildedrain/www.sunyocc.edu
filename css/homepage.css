@@ -30,7 +30,10 @@
 .secure{padding-left:15px;background:url(../images/siteheader_sprites.png) no-repeat -4px -47px;}
 .headernav .tap {color:#1799fe; display:none; text-transform:uppercase; font-size:1.1em; margin:.75em 0 .5em .5em;}
 
+
 /* homepage specific styles */
+.bg_banners {margin-top:-150px;}
+
 /* BRANDS */
 .brands {position:relative; height:auto; margin:2em 0 1em 0; background:rgba(255,255,255,1); border-radius:5px;} /* needed this to set z-index to keep bg_slideshow from overlapping .brands */
 .brands ul {list-style:none; padding:0; z-index:2;}
