@@ -12,7 +12,7 @@
 .headernav div{display:inline-block;vertical-align:top;width:174px;border-right:1px solid #555;padding:15px 0 0 5px;}
   .ie7 .headernav div {display:block; float:left;}
 .headernav .formbox{border:none;}
-.headernav h3{text-transform:uppercase;color:#1799fe;font-size:1em;}
+.headernav h3{text-transform:uppercase;color:#1799fe;font-size:1em; font-weight:200;}
 .headernav ul{padding:0 0 1em 0;height:230px;}
 .headernav li{list-style:none;line-height:1.2;font-size:.9em;margin-bottom:.8em;}
   .ie7 .headernav li, .ie8 .headernav li {font-size:.8em;}
