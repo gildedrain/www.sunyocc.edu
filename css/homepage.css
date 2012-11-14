@@ -2,7 +2,7 @@
 #occlogo{display:block;width:404px;height:100px;position:relative;z-index:1003;left:-100px;top:0;text-indent:1000%;margin:0 0 -100px 0;white-space:nowrap;overflow:hidden;background:transparent url(../images/occlogo.png) no-repeat top left;}
 
 /* OCC HEADER DRAWER (new)*/
-#occheaderbg{position:absolute;height:400px;width:100%;z-index:1002;background:#000;}
+#occheaderbg{position:absolute; left:0; height:400px;width:100%;z-index:1002;background:#000;}
 /* #occheaderbg {position:absolute;} the drawer will overlay the rest of the page */
 .headernav{position:relative;top:0;overflow:hidden;z-index:1004;padding-left:220px;height:48px;}
 /* jquery toggle classes */
