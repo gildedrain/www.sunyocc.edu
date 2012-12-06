@@ -31,7 +31,7 @@
 /* News,Events,Social */
 .news,.events,.social{position:relative;z-index:1;}
 /* prevents the bg_slideshow from overlapping this content */
-a{color:#222;font-weight:200;}
+a{color:#222;}
 .news h2,.events h2,.social h2{display:inline-block;text-transform:uppercase;font-weight:200;background:#dd0000;padding:5px;font-size:1em;color:#fff;}
 .ie7 .news h2,.ie7 .events h2,.ie7 .social h2{display:block;}
 .news h3{font-size:.8em;text-transform:uppercase;color:#dd0000;margin:.75em 0 .25em 0;}
@@ -58,5 +58,5 @@ a{color:#222;font-weight:200;}
 .brands ul{margin:0 0 5px 0;padding:0;}
 .brands li{display:block;padding:0;background:#003151;margin:0;}
 .brands a{text-indent:0;white-space:normal;overflow:visible;background:none;height:auto;color:#fff;width:auto;display:block;font-size:1em;line-height:2em;padding:.5em;border-bottom:1px solid #fff;}
-#lazers,#src,#aac,#ymca,#support{width:auto;margin:0;}
+#lazers,#src,#aac,#ymca,#support{width:auto;margin:0; text-align:left;}
 }
