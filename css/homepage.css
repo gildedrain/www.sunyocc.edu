@@ -4,7 +4,7 @@ body {background:#fff;}
 #occheaderbg.opened,.headernav.opened{height:300px;}
 .headernav div,.headernav .formbox{margin-left:0;}
 /* remove horizontal offset for homepage */
-.headernav h3{background:none;padding:0;}
+.headernav .headernav-title{background:none;padding:0;}
 /* remove tap menu icon for homepage */
 .headernav ul{height:230px;}
 /* so all columns in headernav are same height for homepage */
