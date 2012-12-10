@@ -1,5 +1,6 @@
 /* Requires:occ_global.css,gui.css,jqueryui.css
 /* occ_global overrides */
+body {background:#fff;}
 #occheaderbg.opened,.headernav.opened{height:300px;}
 .headernav div,.headernav .formbox{margin-left:0;}
 /* remove horizontal offset for homepage */
