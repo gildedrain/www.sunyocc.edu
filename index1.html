@@ -13,6 +13,7 @@
   <link type="text/css" rel="stylesheet" href="../occ_global/css/occ_global.css" media="all" />
   <link type="text/css" rel="stylesheet" href="../gui/css/jqueryui.css" media="all" />
   <link href='http://fonts.googleapis.com/css?family=Permanent+Marker|Sarina|PT+Mono|Open+Sans+Condensed:300,700,300italic|Open+Sans:300italic,400italic,600italic,700italic,800italic,300,400,600,700,800|Dancing+Script:400,700|Nothing+You+Could+Do|Devonshire|Rock+Salt' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="../gui/js/modernizr.js"></script>
 </head>
 <body id="index">
   <div id="top">
@@ -25,11 +26,11 @@
       <div class="container">
         <div id="occlogo"><a href="http://www.sunyocc.edu">Onondaga Community College</a></div>
       </div>
-      <div id="occheaderbg" class="basic"></div><!-- header background -->
+      <div id="occheaderbg" class="basic js-drawer"></div><!-- header background -->
       <div class="container">
-        <div class="headernav basic">
+        <div class="headernav basic js-drawer">
           <div>
-            <p class="medium-blue uppercase tap-icon headernav-title">QuickLinks</p>
+            <p class="medium-blue uppercase tap-icon headernav-title js-drawer-toggle">QuickLinks</p>
             <ul>
               <li><a href="#" class="white">Main Homepage</a></li>
               <li><a href="#" class="light-blue">Current Students</a></li>
@@ -44,7 +45,7 @@
               <input type="hidden" name="cof" value="FORID:11" />
               <input type="hidden" name="ie" value="UTF-8" />
               <label for="search" class="hide">I'm looking for...</label>
-              <input id="search" name="q" class="searchbox" type="text" title="I'm looking for..." value="" /><input name="sa" class="submitbutton" type="submit" value="go" />
+              <input id="search" name="q" class="searchbox  js-drawer-open-only" type="text" title="I'm looking for..." value="" /><input name="sa" class="submitbutton" type="submit" value="go" />
             </form>
             <p class="medium-grey">Top Searches</p>
             <ul>
@@ -54,7 +55,7 @@
               <li><a href="#" class="light-blue">Academic Calendar</a></li>
             </ul>
           </div>
-          <a href="#" class="close-headernav">close</a>
+          <a href="#" class="close-headernav js-drawer-toggle">close</a>
 
         </div>
       </div>
@@ -327,11 +328,10 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
   </script>
-  <script type="text/javascript" src="../gui/js/modernizr.js"></script>
   <script type="text/javascript" src="../gui/js/jquery.js"></script>
   <script type="text/javascript" src="../gui/js/jqueryui.js"></script>
   <script type="text/javascript" src="../gui/js/tools.js"></script>
-  <script type="text/javascript" src="../occ_global/js/occ_tools2.js"></script>
+  <script type="text/javascript" src="../occ_global/js/occ_tools.js"></script>
   <script type="text/javascript" src="http://galleries.sunyocc.edu/m/embed.js"></script>
 </body>
 </html>

@@ -1,11 +1,13 @@
 /* Requires:occ_global.css,gui.css,jqueryui.css
 /* occ_global overrides */
 body {background:#fff;}
-#occheaderbg.opened,.headernav.opened{height:330px;}
+#occheaderbg.opened,.headernav.opened{height:307px;}
 .headernav{position:relative;top:0;overflow:hidden;z-index:1004;padding-left:220px;margin-left:0;height:48px;display:block;}
 .headernav div,.headernav .formbox{margin-left:0;}
-.headernav ul{height:240px;}
+.headernav ul{height:230px;}
 .headernav .formbox ul {height:auto;}
+.no-js #occheaderbg{height:281px;}
+.no-js .headernav{position:relative;height:auto;}
 /* so all columns in headernav are same height for homepage */
 #main{background:none;}
 /* remove page top tile graphic for homepage */
