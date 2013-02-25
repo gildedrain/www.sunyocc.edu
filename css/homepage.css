@@ -38,8 +38,8 @@ a{color:#222;}
 .ie7 .news h2,.ie7 .events h2,.ie7 .social h2{display:block;}
 .news h3{font-size:.8em;text-transform:uppercase;color:#dd0000;margin:.75em 0 .25em 0;}
 .news p{margin-bottom:.75em;}
-.events td{line-height:1.5;}
-.news li,.events li{font-size:1.25em;line-height:1em;margin-bottom:.75em;}
+.events ul {list-style:none; padding:0;}
+.view-all {font-size:1.25em;line-height:1em;margin-bottom:.75em;}
 .social{margin-right:5px;}
 .social ul{list-style:none;padding:0;}
 .social a{line-height:1.75;padding-left:36px;color:#003151;font-family:'nothing you could do','open sans',verdana,sans-serif;font-size:1.25em;background:url(../images/homepage_sprites.png) no-repeat 0 0;}
