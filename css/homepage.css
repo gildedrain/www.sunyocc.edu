@@ -41,11 +41,13 @@ a{color:#222;}
 .social a{line-height:1.75;padding-left:36px;color:#003151;font-family:'nothing you could do','open sans',verdana,sans-serif;font-size:1.25em;background:url(../images/homepage_sprites.png) no-repeat 0 0;}
 #facebook{background-position:0 -171px;}
 #twitter{background-position:0 -208px;}
+#instagram{background-position:-222px -171px;}
 #flickr{background-position:0 -246px;}
 #youtube{background-position:0 -283px;}
 #linkedin{background-position:0 -322px;}
 /* Media Queries (see occ_global.css for complete rules) */
-@media all and (max-width:970px),(max-width:550px){#aside{display:none;}
+@media all and (max-width:970px),(max-width:550px){
+#aside{display:none;}
 .brands{text-align:center;}
 }
 @media all and (max-width:970px){
