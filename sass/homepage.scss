@@ -1,0 +1,91 @@
+@import "compass/css3";
+/* Requires:occ_global.css,gui.css,jqueryui.css
+/* occ_global overrides */
+body {
+  background: #fff;
+}
+.main {
+  background: none;
+  border-top: none;
+  box-shadow: none;
+}
+#home .push-menu-opener {display:none;}
+
+/* remove page top tile graphic for homepage */
+.bg_slideshow {
+  margin-top: -1px;
+}       
+
+/* Brands */
+.brands {
+  position: relative;
+  height: auto;
+  margin: 2em 0 1em 0;
+  background: rgba(255,255,255,1);
+  border-radius: 5px;
+}
+/* needed this to set z-index to keep bg_slideshow from overlapping .brands */
+.brands ul {
+  list-style: none;
+  padding: 0;
+  z-index: 2;
+  text-align: center;
+}
+.brands li {
+  display: inline-block;
+}
+.ie7 .brands li {
+  display: block;
+  float: left;
+}
+.brands a {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  background-image: url("../../../occ_global/images/occ_global_sprites.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  display: block;
+  height: 85px;
+}
+#lazers {
+  background-position: 0 0;
+  width: 180px;
+  margin-right: 45px;
+}
+#src {
+  background-position: -225px 0;
+  width: 175px;
+  margin-right: 45px;
+}
+#ymca {
+  background-position: -450px 0;
+  width: 90px;
+  margin-right: 45px;
+}
+#americu {
+  background-position: -595px -8px;
+  width: 165px;
+  margin-right: 45px;
+}
+#lazers:hover {
+  background-position: 0 -83px;
+}
+#src:hover {
+  background-position: -225px -83px;
+}
+#ymca:hover {
+  background-position: -450px -93px;
+}
+#americu:hover {
+  background-position: -595px -100px;
+}
+
+@media all and (max-width:970px) {
+
+}
+
+@media all and (max-width:575px) {
+
+
+}
