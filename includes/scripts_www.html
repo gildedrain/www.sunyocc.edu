@@ -4,16 +4,18 @@
 <script type="text/javascript" src="/gui/js/tools.js?20160229"></script>
 <script type="text/javascript" src="/occ_global/js/occ_tools.js?20160229"></script>
 <script type="text/javascript" src="http://galleries.sunyocc.edu/m/embed.js"></script>
-  <script type="text/javascript">
+<script type="text/javascript">
     var userFeed = new Instafeed({
       get: 'user',
-      userId: 500141408,
-      limit:'1',
-      template: '<a href="{{link}}"><img src="{{model.images.standard_resolution.url}}" alt="" width="310" height="310" /><span class="instagram-caption"><span class="instagram-likes-bar"><span class="instagram-heart">{{model.likes.count}}</span><span class="instagram-comments">{{model.comments.count}}</span></span>{{caption}}</span></a>',      
-      accessToken: '500141408.467ede5.757281a6ade441e4b465ea1861c92739'
+			userId:'500141408',
+			limit:'1',
+      template: '<a href="{{link}}"><img src="{{model.images.standard_resolution.url}}" alt="" width="310" height="310" /><span class="instagram-caption"><span class="instagram-likes-bar"><span class="instagram-heart">{{model.likes.count}}</span><span class="instagram-comments">{{model.comments.count}}</span></span>{{caption}}</span></a>',     
+        clientId: '450ab79793cf48ffa7127a530ab48b23',
+			accessToken: '500141408.1677ed0.6d7f977c4f3740078ed25f013d4f8244'
     });
     userFeed.run();
-  </script>
+</script>
+		
   <script type="text/javascript">
   /* <![CDATA[ */
   var google_conversion_id = 957499276;
